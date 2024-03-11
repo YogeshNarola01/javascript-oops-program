@@ -1,0 +1,38 @@
+<html>
+<script>
+    //Write a JavaScript program that creates a class called 'Vehicle' with properties for make, model, and year. Include a method to display vehicle details. 
+    // Create a subclass called 'Car' that inherits from the 'Vehicle' class and includes an additional property for the number of doors. Override the display method to include the number of doors.
+
+    class main {
+        constructor(id, coname, carname, year) {
+            this.id = id;
+            this.coname = coname;
+            this.carname = carname;
+            this.year = year;
+        }  
+    }
+    class car extends main {
+        constructor(id,coname, carname, year, door) {
+            super(id, coname, carname, year);
+            this.door = door;
+        }
+        display() {
+            console.log(`${this.id}:- ${this.coname}`);
+            console.log(`    ${this.carname}`);
+            console.log(`    ${this.year}`);
+            console.log(`    ${this.door}`);
+        }
+    }
+
+    var n = parseInt(prompt("Enter data number : "));
+    for (var i = 1; i <= n; i++) {
+        var coname = prompt("Enter car compony name : ");
+        var carname = prompt("Enter car model name : ");
+        var year = parseInt(prompt("Enter lonch year : "));
+        var door = parseInt(prompt("Enter car door : "));
+        const obj = new car(i, coname, carname, year, door);
+        obj.display();
+    }
+</script>
+
+</html>

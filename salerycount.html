@@ -1,0 +1,39 @@
+<html>
+<script>
+    // Write a JavaScript program that creates a class called 'Employee' with properties for name and salary. Include a method to calculate annual salary. Create a subclass called 'Manager' that inherits from the 'Employee' class and adds an additional property for department.
+    // Override the annual salary calculation method to include bonuses for managers. Create two instances of the 'Manager' class and calculate their annual salary.
+
+    class salary {
+        constructor(id, ename, dip) {
+            this.id = id;
+            this.ename = ename;
+            this.dip = dip;
+        }
+    }
+    class Manager extends salary {
+        constructor(id, ename, dip, ms) {
+            super(id, ename, dip);
+            this.ms = ms;
+        }
+        calculateAnnualSalary() {
+            console.log(`${this.id}:- Employee name is : ${this.ename}`);
+            console.log((`    Employee dipartment is : ${this.dip}`));
+            console.log(`    Employee monthly salery is : ${this.ms}/-`);
+            console.log(`    Employee anual salery is : ${this.ms * 12}/-`);
+            console.log(`    Anual bonus is 10% : ${this.ms * 12 * 0.1}/-`);
+            console.log(`    Anual final salery is : ${((this.ms * 12 * 0.1) + (this.ms * 12))}/-`);
+        }
+    }
+
+    var n = parseInt(prompt("Enter Employee' Number : "));
+    for (var i = 1; i <= n; i++) {
+        var ename = prompt("Enter Employee Name : ");
+        var dip = prompt("Enter Employee Dipartment : ");
+        var ms = parseInt(prompt("Enter monthly salery : "));
+        let obj = new Manager(i, ename, dip, ms);
+        obj.calculateAnnualSalary();
+    }
+
+</script>
+
+</html>

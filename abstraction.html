@@ -1,0 +1,44 @@
+<html>
+<script>
+    class A {
+        sum(a, b) {
+            return a + b;
+        }
+        min(a, b) {
+            return a - b;
+        }
+        div(a, b) {
+            return a / b;
+        }
+        mul(a, b) {
+            return a * b;
+        }
+        userData(use) {
+            let userdata = use.filter((val) => {
+                return val.status === "active";
+            });
+            return userdata;
+        }
+    }
+
+    let obj = new A;
+    let sum = obj.sum(54, 26);
+    let min = obj.sum(54, 26);
+    let div = obj.sum(50, 5);
+    let mul = obj.sum(5, 2);
+    let data = [
+        { name: "yogesh", phone: 8799356892, country: "india", status: "active" },
+        { name: "kirtan", phone: 7778855668, country: "india", status: "active" },
+        { name: "vd narola", phone: 8140775566, country: "india", status: "deactive" },
+        { name: "yogi", phone: 8866515162, country: "india", status: "active" }];
+    let user = obj.userData(data);
+
+    console.log(`sum is : ${sum}`);
+    console.log(`substraction : ${min}`);
+    console.log(`division is : ${div}`);
+    console.log(`multiplication is : ${mul}`);
+    console.log(`number of active data : ${user.length}`);
+    console.table(user);
+</script>
+
+</html>

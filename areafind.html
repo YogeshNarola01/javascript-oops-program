@@ -1,0 +1,40 @@
+<html>
+<script>
+    //Write a JavaScript program that creates a class called 'Shape' with a method to calculate the area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and override the area calculation method. 
+    //Create an instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
+
+    class Shape {
+        calculateArea() {
+            throw new Error("Method 'calculateArea()' must be overridden in subclasses");
+        }
+    }
+    class Circle extends Shape {
+        constructor(k) {
+            super();
+            this.k = k;
+        }
+        calculateArea() {
+            console.log(`Circle area is(${3.14} * ${this.k} * ${this.k}) : ${Math.PI * this.k * this.k}`);
+        }
+    }
+    class Rectangle extends Shape {
+        constructor(w, h) {
+            super();
+            this.w = w;
+            this.h = h;
+        }
+        calculateArea() {
+            console.log(`Rectangle area is(${this.w} * ${this.h}) : ${this.w * this.h}`);
+        }
+    }
+    var k = parseInt(prompt("Enter circle radius : "));
+    const obj = new Circle(k);
+    obj.calculateArea();
+
+    var w = parseInt(prompt("Enter rectangle width : "));
+    var h = parseInt(prompt("Enter rectangle hight : "));
+    var objj = new Rectangle(w, h);
+    objj.calculateArea();
+</script>
+
+</html>

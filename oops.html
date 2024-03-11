@@ -1,0 +1,25 @@
+<script>
+    class student {
+        constructor(gr, name, age, city) {
+            this.grid = gr;
+            this.name = name;
+            this.age = age;
+            this.city = city;
+        }
+        getstd() {
+            console.log(`Student GRID is : ${this.grid}`);
+            console.log(`Student NAME is : ${this.name}`);
+            console.log(`Student AGE is : ${this.age}`);
+            console.log(`Student CITY is : ${this.city}`);
+        }
+    }
+    var n = parseInt(prompt("Enter std data number : "));
+    for (var i = 1; i <= n; i++) {
+        var gr = parseInt(prompt("Enter std GRID : "));
+        var name = prompt("Enter std NAME : ");
+        var age = parseInt(prompt("Enter std AGE : "));
+        var city = prompt("Enter std CITY : ");
+        var stdstd = new student(gr, name, age, city);
+        stdstd.getstd();
+    }
+</script>

@@ -1,0 +1,32 @@
+<html>
+<script>
+    // Write a JavaScript program to create a class called "Person" with properties for name, age and country.
+    // Include a method to display the person's details. Create two instances of the 'Person' class and display their details.
+    class data {
+        constructor(id,name,age,state,country){
+            this.id = id;
+            this.name = name;
+            this.age = age;
+            this.state = state;
+            this.country = country;
+        }
+        getdata(){
+            console.log(`${this.id}:- ${this.name}`);
+            console.log(`${this.age}`);
+            console.log(`${this.state}`);
+            console.log(`${this.country}`);
+        }
+    }
+
+    var n = parseInt(prompt("Enter number of student : "));
+    for (var i = 1; i <= n; i++) {
+        var name = prompt("Enter your name : ");
+        var age = parseInt(prompt("Enter your age : "));
+        var state = prompt("Enter your state : ");
+        var country = prompt("Enter your country : ");
+        var obj = new data(i,name,age,state,country);
+        obj.getdata();
+    }
+</script>
+
+</html>

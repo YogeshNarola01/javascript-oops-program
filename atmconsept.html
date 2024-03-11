@@ -1,0 +1,56 @@
+<html>
+<script type="text/javascript">
+
+    class bank {
+        constructor(name, acno, pass, balanse) {
+            this.name = name;
+            this.acno = acno;
+            this.pass = pass;
+            this.balanse = balanse;
+        }
+        withdrow() {
+            var id = parseInt(prompt("Enter account number : "));
+            var pas = prompt("Enter your password : ");
+            if (this.acno == id && this.pass == pas) {
+                var ubal = parseInt(prompt("Enter withdrowel amount : "));
+                if (this.balanse > ubal) {
+                    console.log(`Transection succsessfuly...`);
+                    console.log(`your withdrawal balance is : ${ubal}`);
+                    console.log(`Your available balance is : ${this.balanse - ubal}`);
+                } else {
+                    console.log("Your amount is more thane available account balance....");
+                }
+            } else {
+                console.log("Enter yout valid account number and password...");
+            }
+        }
+        diposite() {
+            var id = parseInt(prompt("Enter account number : "));
+            var pas = prompt("Enter your password : ");
+            if (this.acno == id && this.pass == pas) {
+                var ubal = parseInt(prompt("Enter diposite amount : "));
+                console.log(`Transection succsessfuly...`);
+                console.log(`your diposite balance is : ${ubal}`);
+                console.log(`Your available balance is : ${this.balanse + ubal}`);
+            } else {
+                console.log("Enter yout valid account number and password...");
+            }
+        }
+        bal() {
+            var id = parseInt(prompt("Enter account number : "));
+            var pas = prompt("Enter your password : ");
+            if (this.acno == id && this.pass == pas) {
+                console.log(`Your available balance is : ${this.balanse}`);
+            } else {
+                console.log("Enter yout valid account number and password...");
+            }
+        }
+    }
+
+    let obj = new bank("yogesh", 123456, "yogi@123", 10000);
+    obj.bal();
+    obj.withdrow();
+    obj.diposite();
+</script>
+
+</html>

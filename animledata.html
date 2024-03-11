@@ -1,0 +1,39 @@
+<html>
+<script>
+    //Write a JavaScript program that creates a class called 'Animal' with properties for species and sound. Include a method to make the animal's sound. Create a subclass called 'Dog' that inherits from the 'Animal' class and adds an additional property for color.
+    // Override the make sound method to include the dog's color. Create an instance of the 'Dog' class and make it make its sound.
+
+    class Animal {
+        constructor(id, aname, color, sound) {
+            this.id = id;
+            this.aname = aname;
+            this.color = color;
+            this.sound = sound;
+        }
+    }
+    class Aname extends Animal {
+        constructor(id, aname, color, sound, found) {
+            super(id, aname, color, sound);
+            this.found = found;
+        }
+        display() {
+            console.log(`${this.id}:- Animle name : ${this.aname}`);
+            console.log(`    Animle color : ${this.color}`);
+            console.log(`    Animle sound : ${this.sound}`);
+            console.log(`    Animle Found : ${this.found}`);
+        }
+    }
+
+    var n = parseInt(prompt("Enter animal data : "));
+    for (var i = 1; i <= n; i++) {
+        var aname = prompt("Enter animal name : ");
+        var color = prompt("Enter animle color : ");
+        var sound = prompt("Enter animle sound : ");
+        var found = prompt("Enter the area of found this animal : ");
+
+        let obj = new Aname(i, aname, color, sound, found);
+        obj.display();
+    }
+</script>
+
+</html>
